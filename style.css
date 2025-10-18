@@ -15,7 +15,7 @@ header {
     position: relative;
     text-align: center;
     color: white;
-    background: #006400 url('images/Home.jpg') center/cover no-repeat;
+    background: #006400 url('images/Home.JPG') center/cover no-repeat;
 }
 
 nav {
@@ -47,4 +47,5 @@ form input, form textarea { padding: 10px; border-radius: 5px; border: 1px solid
 form button { width: 150px; align-self: center; }
 
 footer { text-align: center; padding: 20px; background-color: #004d00; color: white; }
+
 
