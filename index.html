@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serpent Opti Solutions | HVAC, Pump Control, Fire Safety, Energy Efficiency</title>
     <meta name="description" content="Serpent Opti Solutions delivers HVAC optimization, pump control systems, fire safety solutions, and energy efficiency consulting for industrial and commercial clients.">
-    <meta name="theme-color" content="#004d00">
+    <meta name="theme-color" content="#004d00" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0f10" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://www.serpentoptisolutions.in/">
     <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="color-scheme" content="light dark">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
@@ -168,6 +172,11 @@
       list.classList.toggle('open');
     });
   })();
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
+  }
 </script>
 
 </body>

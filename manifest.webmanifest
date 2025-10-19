@@ -1,0 +1,17 @@
+{
+  "name": "Serpent Opti Solutions",
+  "short_name": "Serpent Opti",
+  "description": "HVAC optimization, pump control, fire safety, and energy efficiency services.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#004d00",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "icons": [
+    { "src": "images/logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["business", "utilities"]
+}
