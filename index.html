@@ -3,19 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serpent Opti Solutions</title>
+    <title>Serpent Opti Solutions | HVAC, Pump Control, Fire Safety, Energy Efficiency</title>
+    <meta name="description" content="Serpent Opti Solutions delivers HVAC optimization, pump control systems, fire safety solutions, and energy efficiency consulting for industrial and commercial clients.">
+    <meta name="theme-color" content="#004d00">
+    <link rel="canonical" href="https://www.serpentoptisolutions.in/">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/Home.JPG">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Serpent Opti Solutions">
+    <meta property="og:description" content="Reliable, efficient, and sustainable HVAC, pump control, fire safety, and energy efficiency services.">
+    <meta property="og:url" content="https://www.serpentoptisolutions.in/">
+    <meta property="og:image" content="https://www.serpentoptisolutions.in/images/Home.JPG">
+    <meta property="og:site_name" content="Serpent Opti Solutions">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Serpent Opti Solutions">
+    <meta name="twitter:description" content="Reliable, efficient, and sustainable HVAC, pump control, fire safety, and energy efficiency services.">
+    <meta name="twitter:image" content="https://www.serpentoptisolutions.in/images/Home.JPG">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Serpent Opti Solutions",
+      "url": "https://www.serpentoptisolutions.in/",
+      "logo": "https://www.serpentoptisolutions.in/images/logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "email": "service@serpentoptisolutions.in",
+        "telephone": "+91-9964055667",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["en"]
+      }]
+    }
+    </script>
 </head>
 <body>
-
+<a class="skip-link" href="#main">Skip to content</a>
 <header>
-    <nav>
+    <nav aria-label="Primary">
         <div class="logo-container">
-            <img src="images/logo.png" alt="Serpent Opti Solutions Logo" class="logo-img">
+            <img src="images/logo.png" alt="Serpent Opti Solutions Logo" class="logo-img" width="64" height="64">
             <div class="logo-text">Serpent Opti Solutions</div>
         </div>
-        <ul class="nav-links">
+        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="primary-navigation" class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#team">Team</a></li>
@@ -28,6 +70,8 @@
         <a href="#contact" class="btn">Get in Touch</a>
     </div>
 </header>
+
+<main id="main" tabindex="-1">
 
 <section id="about" class="section">
     <div class="container">
@@ -65,17 +109,17 @@
         <h2>Our Expertise</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img src="images/team1.jpg" alt="Team Member">
+                <img src="images/team1.jpg" alt="John Doe - HVAC Specialist" loading="lazy" decoding="async">
                 <h4>John Doe</h4>
                 <p>HVAC Specialist</p>
             </div>
             <div class="team-member">
-                <img src="images/team2.jpg" alt="Team Member">
+                <img src="images/team2.jpg" alt="Jane Smith - Pump Control Engineer" loading="lazy" decoding="async">
                 <h4>Jane Smith</h4>
                 <p>Pump Control Engineer</p>
             </div>
             <div class="team-member">
-                <img src="images/team3.jpg" alt="Team Member">
+                <img src="images/team3.jpg" alt="Alex Johnson - Energy Efficiency Consultant" loading="lazy" decoding="async">
                 <h4>Alex Johnson</h4>
                 <p>Energy Efficiency Consultant</p>
             </div>
@@ -85,25 +129,46 @@
 
 <section id="contact" class="section bg-light">
     <div class="container">
-        <h2>Contact Us</h2>
+        <h2 id="contact-heading">Contact Us</h2>
         <p>Reach out for inquiries, services, or consultation. We’re here to help.</p>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+        <form action="#" method="POST" aria-labelledby="contact-heading">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" autocomplete="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" autocomplete="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
             <button type="submit" class="btn">Send Message</button>
         </form>
-        <div class="contact-info">
-            <p>Email: service@serpentoptisolutions.in</p>
-            <p>Phone: +91-9964055667</p>
+        <address class="contact-info">
+            <p>Email: <a href="mailto:service@serpentoptisolutions.in">service@serpentoptisolutions.in</a></p>
+            <p>Phone: <a href="tel:+919964055667">+91-9964055667</a></p>
             <p>Address: Bangalore, India</p>
-        </div>
+        </address>
     </div>
 </section>
+
+</main>
 
 <footer>
     <p>&copy; 2025 Serpent Opti Solutions. All Rights Reserved.</p>
 </footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var list = document.getElementById('primary-navigation');
+    if (!btn || !list) return;
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      list.classList.toggle('open');
+    });
+  })();
+</script>
 
 </body>
 </html>
