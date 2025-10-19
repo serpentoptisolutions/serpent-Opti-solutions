@@ -16,19 +16,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="images/Home.JPG">
+    <link rel="preload" as="image" href="images/hero-bg.JPG">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Serpent Opti Solutions">
     <meta property="og:description" content="Reliable, efficient, and sustainable HVAC, pump control, fire safety, and energy efficiency services.">
     <meta property="og:url" content="https://www.serpentoptisolutions.in/">
-    <meta property="og:image" content="https://www.serpentoptisolutions.in/images/Home.JPG">
+    <meta property="og:image" content="https://www.serpentoptisolutions.in/images/hero-bg.JPG">
     <meta property="og:site_name" content="Serpent Opti Solutions">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Serpent Opti Solutions">
     <meta name="twitter:description" content="Reliable, efficient, and sustainable HVAC, pump control, fire safety, and energy efficiency services.">
-    <meta name="twitter:image" content="https://www.serpentoptisolutions.in/images/Home.JPG">
+    <meta name="twitter:image" content="https://www.serpentoptisolutions.in/images/hero-bg.JPG">
 
     <script type="application/ld+json">
     {
@@ -62,16 +62,18 @@
             <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
         <ul id="primary-navigation" class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#services">Solutions</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a class="cta-link" href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="hero">
-        <h1>Innovating HVAC & Pump Control Solutions</h1>
-        <p>Reliable, Efficient, and Sustainable Services for Your Business</p>
-        <a href="#contact" class="btn">Get in Touch</a>
+        <h1>Smarter HVAC, Pump & Fire Safety</h1>
+        <p>Reduce energy costs, improve reliability, and stay compliant with expert engineering.</p>
+        <a href="#contact" class="btn">Get a Consultation</a>
     </div>
 </header>
 
@@ -86,27 +88,73 @@
 
 <section id="services" class="section bg-light">
     <div class="container">
-        <h2>Our Services</h2>
+        <h2>Solutions & Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3>HVAC Optimization</h3>
-                <p>Enhancing HVAC system performance for maximum efficiency and comfort.</p>
+                <p>Data-driven tuning and controls to maximize comfort while cutting power use.</p>
             </div>
             <div class="service-card">
                 <h3>Pump Control Systems</h3>
-                <p>Advanced pump automation and control for industrial and commercial needs.</p>
+                <p>VFDs, soft starters, and smart sequencing to extend equipment life.</p>
             </div>
             <div class="service-card">
                 <h3>Fire Safety Solutions</h3>
-                <p>Comprehensive fire safety audits, equipment, and system integration.</p>
+                <p>Audits, system integration, and compliance documentation you can trust.</p>
             </div>
             <div class="service-card">
                 <h3>Energy Efficiency Consulting</h3>
-                <p>Optimizing energy consumption to reduce costs and carbon footprint.</p>
+                <p>Metering, baselining, and ROI-backed retrofits to reduce OPEX and emissions.</p>
             </div>
         </div>
     </div>
 </section>
+
+<section id="industries" class="section">
+    <div class="container">
+        <h2>Industries We Serve</h2>
+        <div class="industries-grid">
+            <div class="industry-card">
+                <div class="industry-emoji" aria-hidden="true">🏢</div>
+                <h4>Commercial Buildings</h4>
+                <p>Grade-A offices, malls, campuses, hotels.</p>
+            </div>
+            <div class="industry-card">
+                <div class="industry-emoji" aria-hidden="true">🏭</div>
+                <h4>Manufacturing</h4>
+                <p>Process cooling, compressed air, utilities.</p>
+            </div>
+            <div class="industry-card">
+                <div class="industry-emoji" aria-hidden="true">🖥️</div>
+                <h4>Data Centers</h4>
+                <p>Precision cooling and redundancy strategies.</p>
+            </div>
+            <div class="industry-card">
+                <div class="industry-emoji" aria-hidden="true">🏥</div>
+                <h4>Healthcare</h4>
+                <p>Critical environments with strict compliance needs.</p>
+            </div>
+        </div>
+    </div>
+ </section>
+
+<section id="projects" class="section bg-light">
+    <div class="container">
+        <h2>Highlighted Projects</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-metric">22% energy savings</div>
+                <h4>Chiller Plant Optimization</h4>
+                <p>Retro-commissioning and control logic upgrades for a 700TR plant.</p>
+            </article>
+            <article class="project-card">
+                <div class="project-metric">99.9% uptime</div>
+                <h4>Pump Automation Upgrade</h4>
+                <p>VFD sequencing and surge protection for critical utilities.</p>
+            </article>
+        </div>
+    </div>
+ </section>
 
 <section id="team" class="section">
     <div class="container">
@@ -170,6 +218,40 @@
       var expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
       list.classList.toggle('open');
+    });
+    // Close menu on link click (mobile)
+    list.addEventListener('click', function(e){
+      var target = e.target;
+      if (target && target.tagName === 'A') {
+        btn.setAttribute('aria-expanded', 'false');
+        list.classList.remove('open');
+      }
+    });
+  })();
+  // Highlight active nav link on scroll
+  (function(){
+    var sectionIds = ['services','industries','projects','team','about','contact'];
+    var linkById = new Map();
+    sectionIds.forEach(function(id){
+      var link = document.querySelector('.nav-links a[href="#'+id+'"]');
+      if (link) linkById.set(id, link);
+    });
+    if (linkById.size === 0 || !('IntersectionObserver' in window)) return;
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id = entry.target.id;
+        var link = linkById.get(id);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.nav-links a.active').forEach(function(a){ a.classList.remove('active'); a.removeAttribute('aria-current'); });
+          link.classList.add('active');
+          link.setAttribute('aria-current','true');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.2, 0.6] });
+    sectionIds.forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) observer.observe(el);
     });
   })();
   if ('serviceWorker' in navigator) {

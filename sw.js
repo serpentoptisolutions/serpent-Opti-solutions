@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sos-site-v1';
+const CACHE_NAME = 'sos-site-v2';
 const OFFLINE_URL = '/offline.html';
 const ASSETS_TO_CACHE = [
   '/',
@@ -6,7 +6,7 @@ const ASSETS_TO_CACHE = [
   '/style.css',
   '/images/logo.png',
   '/offline.html',
-  '/images/Home.JPG',
+  '/images/hero-bg.JPG',
   '/images/team1.jpg',
   '/images/team2.jpg',
   '/images/team3.jpg'
