@@ -183,7 +183,14 @@
     <div class="container">
         <h2 id="contact-heading">Contact Us</h2>
         <p>Reach out for inquiries, services, or consultation. We’re here to help.</p>
-        <form action="#" method="POST" aria-labelledby="contact-heading">
+        <form action="https://formsubmit.co/service@serpentoptisolutions.in" method="POST" aria-labelledby="contact-heading">
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New message from Serpent Opti Solutions website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="/#contact-thanks">
+            <input type="text" name="_honey" value="" style="display:none">
+            <input type="hidden" name="form" value="contact">
             <label for="name">Name</label>
             <input id="name" type="text" name="name" autocomplete="name" placeholder="Your Name" required>
 
@@ -195,6 +202,10 @@
 
             <button type="submit" class="btn">Send Message</button>
         </form>
+        <div id="contact-thanks" role="status" aria-live="polite" hidden
+             style="margin-top:1rem;padding:12px;border:1px solid #0a0;background:#eaffea;border-radius:6px;">
+            <strong>Thank you!</strong> Your message has been sent. We'll get back to you soon.
+        </div>
         <address class="contact-info">
             <p>Email: <a href="mailto:service@serpentoptisolutions.in">service@serpentoptisolutions.in</a></p>
             <p>Phone: <a href="tel:+919964055667">+91-9964055667</a></p>
@@ -259,6 +270,13 @@
       navigator.serviceWorker.register('/sw.js').catch(function(){});
     });
   }
+  // Show contact success message after redirect from form submission
+  (function(){
+    if (location.hash === '#contact-thanks') {
+      var el = document.getElementById('contact-thanks');
+      if (el) el.hidden = false;
+    }
+  })();
 </script>
 
 </body>
